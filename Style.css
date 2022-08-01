@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {font-size: 62.5%;}
+body {
+    display: grid;
+    place-items: center;
+    background-color: azure;
+    color:black;
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    position: fixed; /*para que ocupe solo el espacio de la pantalla y no haga scroll*/
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+a { /*Etiquetas globales*/
+    text-decoration: none;
+    cursor: pointer;
+}
+.wrapper {
+    display: grid;
+    grid-template-rows: 7.5rem 31rem 8rem 3rem 15.2rem 2rem;
+    width: 37.5rem;
+    height: 66.7rem;
+    background-color: #e3e7eb;
+    border-radius: 10px;
+}
+header {
+    margin-top: 11px;
+}
+header nav {
+    display: flex;
+    place-content: center;
+}
+header nav .nav-right-section {
+    width: 300px;
+    height: auto; /*tamaño automatico de acuerdo al padre*/
+    display: flex; /*Los colocamos en línea*/
+    list-style: none; /*Le quitamos los bullets*/
+    justify-content: space-between; /*Justificamos y colocamos los elementos al centro espaciados entre ellos*/
+    margin-top: 6px;
+}
+.nav-right-section .nav-icons .arrow-icon {
+    width: 25px;
+}
+.nav-right-section .nav-icons .more-icon {
+    width: 20px;
+}
+/*.nav-right-section .nav-icons {
+    border-radius: 50%;
+    background: #e0e0e0;
+    box-shadow:  5px 5px 10px #777777,
+                 -5px -5px 10px #ffffff;
+}*/
+.nav-right-section span {
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0 0 1.9rem 0;
+}
+main {
+    height: 30rem;
+}
+.card-music {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    margin: 3rem 0 3rem 60px;
+}
+
+.card-music .card{
+    border-radius: 50%;
+    background: #e0e0e0;
+    box-shadow:  5px 5px 10px #777777,
+             -5px -5px 10px #ffffff;
+}
+.card-music img {
+    width: 100%;
+    border-radius: 50%;
+}
+.title {
+    justify-self: center;
+    text-align: center;
+    margin: 4.5rem 0 1.5rem 0;
+}
+.title h2 {
+    margin: 0;
+    margin-top: 1.4rem;
+    font-weight: 500;
+    font-size: 2.2rem;
+}
+.title h3 {
+    margin: 0;
+    margin-top: 0.7rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+.progress-bar {
+    display: grid;
+    grid-template-columns: repeat(2, 18.75px) 1fr repeat(2, 18.75px);
+    grid-template-rows: 10px 1fr;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.progress-bar .bar {
+    grid-column: 3;
+    position: relative;
+    width: 300px;
+    height: 5px;
+    background: linear-gradient(to right, #2edfc8, #ddfdff);
+    border-radius: 20px;
+} 
+.progress-bar .bar .dot {
+    position: absolute;
+    left: 120px;
+    top: -2px;
+    width: 9px;
+    height: 9px;
+    background-color: #2edfc8;
+    border-radius: 50%;
+}
+.progress-bar .start {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 12px;
+    font-weight: 500;
+}
+.progress-bar .end {
+    position: relative;
+    left: -4px;
+    justify-self: center;
+    grid-column: 4;
+    grid-row: 2;
+    font-size: 12px;
+    font-weight: 500;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4.5rem 0 4.5rem 0;
+}
+.player-buttons {
+    width: 40px;
+    height: 40px;
+    box-shadow: 4px -4px 8px 2px #88cfc6,
+                -4px 4px 8px 2px #ddfdff;
+    border-radius: 50px;
+}
+.play {
+    margin: 0 1.6rem;
+    width: 60px;
+    height: 60px;
+    background-image: url('https://cdn3.iconfinder.com/data/icons/bold-media-player-ui/100/Play-512.png');
+    background-repeat: no-repeat;
+    background-size: 35px;
+    background-position: center;
+}
+.shuffle {
+    margin-right: 1.6rem;
+    background-image: url('https://th.bing.com/th/id/R.ae66539a5de8d428ee8bbcc4c5fdbf94?rik=1H3dfzz8RThvzw&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_198992.png&ehk=JPvE7GQROLERqnTyV1LlMHRfcu6%2brgyK8GGd8oCD52g%3d&risl=&pid=ImgRaw&r=0');
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position: center;
+}
+.previously {
+    background-image: url('https://th.bing.com/th/id/R.ea8ad045b7e86cd1aaa654afcdd5b597?rik=jmpLySZjlNCmXQ&pid=ImgRaw&r=0');
+    transform: scaleX(-1);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+}
+.next {
+    background-image: url('https://th.bing.com/th/id/R.ea8ad045b7e86cd1aaa654afcdd5b597?rik=jmpLySZjlNCmXQ&pid=ImgRaw&r=0');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+}
+.repeat {
+    margin-left: 1.6rem;
+    background-image: url('https://cdn4.iconfinder.com/data/icons/multimedia-258/32/Repeat-512.png');
+    background-repeat: no-repeat;
+    background-size: 23px;
+    background-position: center;
+}
+footer {
+    margin-top: 27rem;
+    display: flex;
+    place-content: center;
+}
+.nav-bar {
+    width: 142px;
+    height: 5px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.shuffle:hover, .previously:hover, .next:hover, .repeat:hover {
+    box-shadow: inset 4px 4px 8px #88cfc6,
+              inset -4px -4px 8px #ddfdff;
+}
+  
+.play:hover {
+    box-shadow: inset 4px 4px 8px #88cfc6,
+              inset -4px -4px 8px #ddfdff;
+}
